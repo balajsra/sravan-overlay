@@ -21,7 +21,6 @@ DEPEND="
 	dev-libs/yajl
 	dev-libs/jsoncpp
 "
-# TODO: Add zscroll package
 # TODO: Add deadd-notification-center
 # TODO: Add polybar-dwm-module
 RDEPEND="
@@ -33,6 +32,7 @@ RDEPEND="
 	sys-apps/gnome-disk-utility
 	media-sound/playerctl
 	media-sound/pavucontrol
+	app-misc/zscroll
 "
 
 src_unpack() {
