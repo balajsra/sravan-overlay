@@ -1,0 +1,27 @@
+#+TITLE: sravan-overlay
+#+AUTHOR: Sravan Balaji
+
+* Description
+
+This is my personal gentoo overlay which holds ebuilds for programs I couldn't find in the default gentoo repos and/or programs that I have configured or written myself (e.g., personal dwm-flexipatch configuration).
+
+* Usage
+
+First, you will need to install the ~eselect-repository~ package.
+
+#+BEGIN_SRC shell
+sudo emerge app-eselect/eselect-repository
+#+END_SRC
+
+Then, you can add this repository and sync.
+
+#+BEGIN_SRC shell
+sudo eselect repository add sravan-overlay git https://gitea.sravanbalaji.com/sravan/sravan-overlay.git
+sudo emerge --sync
+#+END_SRC
+
+Finally, you can install packages from this repo. For example, my personal configuration of ~dwm-flexipatch~.
+
+#+BEGIN_SRC shell
+sudo emerge x11-wm/dwm-flexipatch::sravan-overlay
+#+END_SRC
