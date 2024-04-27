@@ -29,7 +29,15 @@ DEPEND="
 	dev-libs/libnl
 	dev-libs/jsoncpp
 "
-RDEPEND=${DEPEND}
+RDEPEND="
+	${DEPEND}
+	sys-process/btop
+	sys-apps/qdirstat
+	sys-apps/gnome-disk-utility
+	media-sound/playerctl
+	media-sound/pavucontrol
+	dev-python/zscroll
+"
 
 inherit git-r3
 inherit cmake

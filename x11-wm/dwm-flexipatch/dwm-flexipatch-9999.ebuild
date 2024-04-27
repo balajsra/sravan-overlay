@@ -27,12 +27,6 @@ RDEPEND="
 	x11-misc/polybar-dwm-module
 	x11-misc/rofi
 	x11-terms/kitty
-	sys-process/btop
-	sys-apps/qdirstat
-	sys-apps/gnome-disk-utility
-	media-sound/playerctl
-	media-sound/pavucontrol
-	app-misc/zscroll
 "
 
 src_unpack() {
