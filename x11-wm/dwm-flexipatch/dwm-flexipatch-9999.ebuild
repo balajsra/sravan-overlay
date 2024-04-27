@@ -25,6 +25,7 @@ DEPEND="
 RDEPEND="
 	${DEPEND}
 	x11-misc/polybar-dwm-module
+	x11-misc/deadd-notification-center
 	x11-misc/rofi
 	x11-terms/kitty
 "
