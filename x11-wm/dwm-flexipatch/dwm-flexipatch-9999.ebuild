@@ -22,9 +22,9 @@ DEPEND="
 	dev-libs/jsoncpp
 "
 # TODO: Add deadd-notification-center
-# TODO: Add polybar-dwm-module
 RDEPEND="
 	${DEPEND}
+	x11-misc/polybar-dwm-module
 	x11-misc/rofi
 	x11-terms/kitty
 	sys-process/btop
