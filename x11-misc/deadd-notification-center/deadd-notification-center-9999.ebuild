@@ -14,7 +14,7 @@ KEYWORDS="amd64"
 S="${WORKDIR}/linux_notification_center-master"
 
 DEPEND="
-	dev-haskell/call-stack
+	dev-haskell/stack-bin
 	x11-libs/cairo
 	x11-libs/pango
 	dev-libs/gobject-introspection
