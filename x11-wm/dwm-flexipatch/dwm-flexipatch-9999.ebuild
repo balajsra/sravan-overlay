@@ -27,6 +27,7 @@ RDEPEND="
 	x11-misc/polybar-dwm-module
 	x11-misc/deadd-notification-center-bin
 	x11-misc/rofi
+	x11-misc/greenclip
 	x11-terms/kitty
 "
 
