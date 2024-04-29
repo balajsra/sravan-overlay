@@ -37,6 +37,7 @@ RDEPEND="
 	media-sound/playerctl
 	media-sound/pavucontrol
 	dev-python/zscroll
+	media-fonts/nerd-fonts
 "
 
 inherit git-r3
