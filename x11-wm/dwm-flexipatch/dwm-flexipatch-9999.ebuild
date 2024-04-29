@@ -29,6 +29,10 @@ RDEPEND="
 	x11-misc/rofi
 	x11-misc/greenclip
 	x11-terms/kitty
+	app-shells/fish
+	app-shells/starship
+	app-shells/krabby-bin
+	media-fonts/nerd-fonts
 "
 
 src_unpack() {
