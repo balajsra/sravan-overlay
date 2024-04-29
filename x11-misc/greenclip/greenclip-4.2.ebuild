@@ -23,7 +23,6 @@ S=${WORKDIR}
 pkg_setup() {
 	cd ${WORKDIR}
 	wget -O greenclip https://github.com/erebe/greenclip/releases/download/v${PV}/greenclip-v${PV}
-	wget -O greenclip.service https://aur.archlinux.org/cgit/aur.git/plain/greenclip.service?h=rofi-greenclip
 }
 
 src_compile() {
@@ -33,7 +32,7 @@ src_compile() {
 src_install() {
 	if use systemd ; then
 		insinto /usr/lib/systemd/user/
-		doins greenclip.service
+		doins "${FILESDIR}"/greenclip.service
 		elog "Run \`systemctl --user enable --now greenclip.service\` to enable greenclip systemd user service."
 	fi
 	
