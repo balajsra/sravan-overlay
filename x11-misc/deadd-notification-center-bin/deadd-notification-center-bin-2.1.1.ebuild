@@ -20,7 +20,6 @@ DEPEND="
 	net-misc/wget
 "
 RDEPEND="
-	dev-python/notify-send-py
 "
 
 pkg_setup() {
