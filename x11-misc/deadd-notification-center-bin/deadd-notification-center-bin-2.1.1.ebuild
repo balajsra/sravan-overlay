@@ -19,6 +19,9 @@ DEPEND="
 	gui-libs/gtk
 	net-misc/wget
 "
+RDEPEND="
+	dev-python/notify-send-py
+"
 
 pkg_setup() {
 	cd ${WORKDIR}
@@ -39,6 +42,6 @@ src_install() {
 	if use systemd && use dbus ; then
 		make service || die "make service failed"
 	fi
-	
+
 	make DESTDIR="${D}" PREFIX="${EPREFIX}/usr" install || die "make install failed"
 }
