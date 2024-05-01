@@ -21,11 +21,10 @@ DEPEND="
 	dev-libs/yajl
 	dev-libs/jsoncpp
 "
-# TODO: Add deadd-notification-center
 RDEPEND="
 	${DEPEND}
 	x11-misc/polybar-dwm-module
-	x11-misc/deadd-notification-center-bin
+	xfce-extra/xfce4-notifyd
 	x11-misc/rofi
 	x11-misc/greenclip
 	x11-terms/kitty
