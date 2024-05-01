@@ -12,21 +12,20 @@ SRC_URI="https://files.pythonhosted.org/packages/f7/44/edf5578a7e3d79e30505286da
 
 S="${WORKDIR}"/notify-send.py-${PV}
 
-LICENSE="GPL-3"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="amd64"
 
 DEPEND="
-	sys-apps/sed
 	dev-python/setuptools[${PYTHON_USEDEP}]
 "
+RDEPEND="
+	dev-python/notify2
+	dev-python/dbus-python
+	dev-python/pygobject
+"
 
-src_prepare() {
-	eapply_user
-	sed -i -e 's/from .notify3 import notify3/import notify3.notify3/g' ${S}/notify_send_py/notify_send_py.py || die "Failed to fix module import in script"
-	mv ${S}/notify_send_py/notify_send_py.py ${S}/notify_send_py/notify-send.py
-}
-
-src_install() {
-	distutils-r1_src_install
+python_install() {
+	distutils-r1_python_install
+	dobin "${FILESDIR}"/notify-send.py
 }
