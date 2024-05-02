@@ -26,7 +26,7 @@ RDEPEND="
 	x11-misc/polybar-dwm-module
 	x11-misc/betterlockscreen
 	x11-misc/xss-lock
-	xfce-extra/xfce4-notifyd
+	x11-misc/dunst
 	x11-apps/xkill
 	x11-misc/rofi
 	x11-misc/greenclip
@@ -34,6 +34,13 @@ RDEPEND="
 	app-shells/fish
 	app-shells/starship
 	app-shells/krabby-bin
+	media-fonts/nerd-fonts
+	sys-process/btop
+	sys-apps/qdirstat
+	sys-apps/gnome-disk-utility
+	media-sound/playerctl
+	media-sound/pavucontrol
+	dev-python/zscroll
 	media-fonts/nerd-fonts
 "
 

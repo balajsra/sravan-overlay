@@ -9,7 +9,7 @@ SRC_URI="https://github.com/phuhl/linux_notification_center/archive/refs/tags/${
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="~amd64"
 
 S=${WORKDIR}/linux_notification_center-${PV}
 

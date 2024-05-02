@@ -31,13 +31,6 @@ DEPEND="
 "
 RDEPEND="
 	${DEPEND}
-	sys-process/btop
-	sys-apps/qdirstat
-	sys-apps/gnome-disk-utility
-	media-sound/playerctl
-	media-sound/pavucontrol
-	dev-python/zscroll
-	media-fonts/nerd-fonts
 "
 
 inherit git-r3

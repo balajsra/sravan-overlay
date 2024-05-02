@@ -14,7 +14,7 @@ S="${WORKDIR}"/notify-send.py-${PV}
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="~amd64"
 
 DEPEND="
 	dev-python/setuptools[${PYTHON_USEDEP}]
