@@ -24,6 +24,8 @@ DEPEND="
 RDEPEND="
 	${DEPEND}
 	x11-misc/polybar-dwm-module
+	x11-misc/betterlockscreen
+	x11-misc/xss-lock
 	xfce-extra/xfce4-notifyd
 	x11-misc/rofi
 	x11-misc/greenclip
