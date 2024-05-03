@@ -28,6 +28,7 @@ RDEPEND="
 	x11-misc/xss-lock
 	x11-misc/dunst
 	x11-misc/xgetres
+	x11-misc/numlockx
 	x11-apps/xkill
 	x11-misc/rofi
 	x11-misc/greenclip
@@ -43,6 +44,14 @@ RDEPEND="
 	media-sound/pavucontrol
 	dev-python/zscroll
 	media-fonts/nerd-fonts
+	sys-auth/polkit
+	gnome-extra/polkit-gnome
+	xfce-base/xfce4-power-manager
+	x11-misc/unclutter-xfixes
+	x11-misc/xdotool
+	x11-misc/picom
+	x11-misc/gammastep
+	app-misc/geoclue
 "
 
 src_unpack() {
