@@ -52,6 +52,7 @@ RDEPEND="
 	x11-misc/picom
 	x11-misc/gammastep
 	app-misc/geoclue
+	app-misc/fastfetch
 "
 
 src_unpack() {
