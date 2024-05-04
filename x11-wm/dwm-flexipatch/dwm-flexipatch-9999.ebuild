@@ -53,6 +53,7 @@ RDEPEND="
 	x11-misc/gammastep
 	app-misc/geoclue
 	app-misc/fastfetch
+	net-wireless/blueman
 "
 
 src_unpack() {
