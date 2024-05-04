@@ -54,6 +54,7 @@ RDEPEND="
 	app-misc/geoclue
 	app-misc/fastfetch
 	net-wireless/blueman
+	app-misc/openrgb
 "
 
 src_unpack() {
