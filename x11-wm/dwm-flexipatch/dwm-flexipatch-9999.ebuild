@@ -5,7 +5,11 @@ EAPI=8
 
 DESCRIPTION="Dynamic Window Manager for X with preprocessor directive patching"
 HOMEPAGE="https://gitea.sravanbalaji.com/sravan/dwm-flexipatch"
-SRC_URI="https://gitea.sravanbalaji.com/sravan/${PN}/archive/master.tar.gz"
+
+EGIT_REPO_URI="https://gitea.sravanbalaji.com/sravan/dwm-flexipatch.git"
+EGIT_BRANCH="master"
+EGIT_CHECKOUT_DIR="${WORKDIR}/${PN}"
+EGIT_SUBMODULES=( '*' )
 
 LICENSE="MIT"
 SLOT="0"
@@ -57,11 +61,7 @@ RDEPEND="
 	app-misc/openrgb
 "
 
-src_unpack() {
-	if [[ -n ${A} ]]; then
-		unpack ${A}
-	fi
-}
+inherit git-r3
 
 src_install() {
 	emake DESTDIR="${D}" PREFIX="${EPREFIX}/usr" install || die "make install failed"
