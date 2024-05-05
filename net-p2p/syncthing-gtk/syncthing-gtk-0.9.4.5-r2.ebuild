@@ -1,4 +1,4 @@
-# Copyright 2023 Gentoo Authors
+# Copyright 2023-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 # Source: Written from scratch for sunset-repo overlay
@@ -17,7 +17,7 @@ SRC_URI="https://github.com/${PN}/${PN}/archive/refs/tags/${PV}.tar.gz -> ${P}.t
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="~amd64"
 
 DEPEND="${PYTHON_DEPS}
 	x11-libs/gtk+:3

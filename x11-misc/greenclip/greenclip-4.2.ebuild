@@ -8,7 +8,7 @@ HOMEPAGE="https://github.com/erebe/greenclip"
 
 LICENSE="GPL"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="~amd64"
 
 IUSE="systemd"
 DEPEND="
@@ -35,6 +35,6 @@ src_install() {
 		doins "${FILESDIR}"/greenclip.service
 		elog "Run \`systemctl --user enable --now greenclip.service\` to enable greenclip systemd user service."
 	fi
-	
+
 	dobin greenclip
 }

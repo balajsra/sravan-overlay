@@ -15,7 +15,7 @@ EGIT_REPO_URI="https://github.com/pop-os/system76-power.git"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="~amd64"
 
 S="${WORKDIR}/${P}"
 

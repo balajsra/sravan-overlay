@@ -9,7 +9,7 @@ SRC_URI="https://github.com/commercialhaskell/stack/releases/download/v${PV}/sta
 
 LICENSE="BSD-3"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="~amd64"
 
 S="${WORKDIR}/stack-${PV}-linux-x86_64"
 

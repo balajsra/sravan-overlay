@@ -11,7 +11,7 @@ EGIT_REPO_URI="https://github.com/fairyglade/ly.git"
 
 LICENSE="WTFPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="~amd64"
 IUSE="openrc runit systemd"
 
 DEPEND="sys-libs/pam

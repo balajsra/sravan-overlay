@@ -1,4 +1,4 @@
-# Copyright 1999-2021 Gentoo Authors
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 # Source overlay: https://github.com/BlueManCZ/edgets
@@ -13,7 +13,7 @@ EGIT_REPO_URI="${HOMEPAGE}.git"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
-KEYWORDS="amd64"
+KEYWORDS="~amd64"
 
 DEPEND="media-gfx/inkscape
 	x11-apps/xcursorgen"

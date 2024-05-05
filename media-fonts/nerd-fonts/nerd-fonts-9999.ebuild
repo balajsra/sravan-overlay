@@ -1,4 +1,4 @@
-# Copyright 1999-2024 Gentoo Foundation
+# Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -129,7 +129,7 @@ IUSE="${FONT_IUSE}"
 REQUIRED_USE="|| ( ${FONT_IUSE} )"
 
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="~amd64"
 
 approx_fonts_disk_reqs() {
 	# all fonts combined need ~8G

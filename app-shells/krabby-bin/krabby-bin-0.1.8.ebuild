@@ -9,7 +9,7 @@ SRC_URI="https://github.com/yannjor/krabby/releases/download/v${PV}/krabby-${PV}
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="~amd64"
 
 S=${WORKDIR}
 
