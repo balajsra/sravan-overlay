@@ -34,6 +34,7 @@ RDEPEND="
 	x11-misc/xgetres
 	x11-misc/numlockx
 	x11-apps/xkill
+	x11-apps/xinput
 	x11-misc/rofi
 	x11-misc/greenclip
 	x11-terms/kitty
