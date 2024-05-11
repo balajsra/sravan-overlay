@@ -47,6 +47,7 @@ RDEPEND="
 	sys-apps/gnome-disk-utility
 	media-sound/playerctl
 	media-sound/pavucontrol
+	media-gfx/flameshot
 	dev-python/zscroll
 	media-fonts/nerd-fonts
 	sys-auth/polkit
