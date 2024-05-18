@@ -14,11 +14,11 @@ KEYWORDS="~amd64"
 
 S="${WORKDIR}"
 
-BDEPEND="dev-util/meson"
+BDEPEND="dev-build/meson"
 
 RDEPEND="dev-python/pygobject
 		 dev-python/pyudev
-		 dev-python/python-evdev
+		 dev-python/libevdev
 		 dev-python/pyxdg
 		 sys-devel/gettext
 		 dev-libs/appstream-glib
