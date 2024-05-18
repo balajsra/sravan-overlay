@@ -7,23 +7,26 @@ PYTHON_COMPAT=( python3_{10..12} )
 
 DESCRIPTION="Graphical application to configure Logitech Wheels"
 HOMEPAGE="https://github.com/berarma/oversteer"
-EGIT_REPO_URI="https://github.com/berarma/oversteer.git"
+SRC_URI="https://github.com/berarma/oversteer/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
+
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
-
-S="${WORKDIR}"
 
 BDEPEND="dev-build/meson"
 
 RDEPEND="dev-python/pygobject
 		 dev-python/pyudev
-		 dev-python/libevdev
+		 dev-python/evdev
 		 dev-python/pyxdg
+		 dev-python/scipy
+		 dev-python/pycairo
+		 dev-python/matplotlib
 		 sys-devel/gettext
 		 dev-libs/appstream-glib
 		 dev-util/desktop-file-utils
-		 x11-libs/gtk+"
+		 x11-libs/gtk+
+"
 
 src_prepare() {
 	eapply_user

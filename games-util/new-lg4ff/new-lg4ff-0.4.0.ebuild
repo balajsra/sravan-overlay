@@ -7,7 +7,7 @@ inherit linux-mod linux-info
 
 DESCRIPTION="Experimental Logitech force feedback module"
 HOMEPAGE="https://github.com/berarma/new-lg4ff"
-SRC_URI="https://github.com/berarma/new-lg4ff/archive/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/berarma/new-lg4ff/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
