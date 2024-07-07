@@ -34,5 +34,7 @@ src_install() {
 	dodoc README.md
 
 	elog "In /etc/default/grub, set \`GRUB_THEME=\"/usr/share/grub/themes/fallout/theme.txt\"\`."
-	elog "Then update GRUB with \`sudo grub-mkconfig -o /boot/grub/grub.cfg\`."
+	elog "For encrypted root partitions, you will want to copy theme into boot directory. E.g., \`sudo mkdir -p /boot/grub/themes && sudo cp -R /usr/share/grub/themes/fallout /boot/grub/themes/\`."
+	elog "Then set \`GRUB_THEME=\"/boot/grub/themes/fallout/theme.txt\"\`"
+	elog "Finally, update GRUB with \`sudo grub-mkconfig -o /boot/grub/grub.cfg\`."
 }
