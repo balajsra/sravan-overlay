@@ -13,10 +13,12 @@ HOMEPAGE="https://github.com/metafates/mangal"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="
-	bash
-	fish
-	zsh
+IUSE="bash fish zsh"
+
+RDEPEND="
+	bash? ( app-shells/bash )
+	fish? ( app-shells/fish )
+	zsh? ( app-shells/zsh )
 "
 
 if [[ ${PV} == 9999 ]]; then
