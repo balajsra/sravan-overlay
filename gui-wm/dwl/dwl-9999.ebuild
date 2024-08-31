@@ -36,6 +36,10 @@ RDEPEND="
 	X? (
 		x11-base/xwayland
 	)
+	gui-apps/wofi
+	x11-terms/kitty:=[wayland]
+	x11-terms/kitty-shell-integration
+	x11-terms/kitty-terminfo
 "
 # uses <linux/input-event-codes.h>
 DEPEND="
