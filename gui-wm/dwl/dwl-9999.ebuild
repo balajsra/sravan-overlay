@@ -19,9 +19,9 @@ IUSE="X"
 
 S="${WORKDIR}/${PN}"
 
-inherit git-r3 savedconfig toolchain-funcs
+inherit git-r3 toolchain-funcs
 
-COMMON_DEPEND+="
+COMMON_DEPEND="
 	gui-libs/wlroots:=[libinput,session,X?]
 	dev-libs/libinput:=
 	dev-libs/wayland
@@ -48,12 +48,6 @@ BDEPEND="
 	virtual/pkgconfig
 "
 
-src_prepare() {
-	restore_config config.h
-
-	default
-}
-
 src_compile() {
 	emake PKG_CONFIG="$(tc-getPKG_CONFIG)" CC="$(tc-getCC)" \
 		XWAYLAND="$(usev X -DXWAYLAND)" XLIBS="$(usev X "xcb xcb-icccm")" dwl
@@ -62,6 +56,4 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" PREFIX="${EPREFIX}/usr" install
 	dodoc CHANGELOG.md README.md
-
-	save_config config.h
 }
