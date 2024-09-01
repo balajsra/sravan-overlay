@@ -36,10 +36,18 @@ RDEPEND="
 	X? (
 		x11-base/xwayland
 	)
+	gui-apps/kanshi
+	gui-apps/wdisplays
 	gui-apps/wofi
+	gui-apps/wl-clipboard
+	x11-misc/dunst:=[wayland]
 	x11-terms/kitty:=[wayland]
 	x11-terms/kitty-shell-integration
 	x11-terms/kitty-terminfo
+	media-gfx/flameshot:=[wayland]
+	gui-apps/swayidle
+	gui-apps/swaylock-effects
+	gui-apps/swaybg
 "
 # uses <linux/input-event-codes.h>
 DEPEND="
