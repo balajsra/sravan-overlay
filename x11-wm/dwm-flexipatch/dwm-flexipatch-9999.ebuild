@@ -49,7 +49,6 @@ RDEPEND="
 	media-sound/pavucontrol
 	media-gfx/flameshot
 	dev-python/zscroll
-	media-fonts/nerd-fonts
 	sys-auth/polkit
 	gnome-extra/polkit-gnome
 	xfce-base/xfce4-power-manager

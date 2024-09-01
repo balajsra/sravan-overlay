@@ -41,13 +41,27 @@ RDEPEND="
 	gui-apps/wofi
 	gui-apps/wl-clipboard
 	x11-misc/dunst:=[wayland]
-	x11-terms/kitty:=[wayland]
+	x11-terms/kitty:=[wayland,X?]
 	x11-terms/kitty-shell-integration
 	x11-terms/kitty-terminfo
 	media-gfx/flameshot:=[wayland]
 	gui-apps/swayidle
-	gui-apps/swaylock-effects
+	gui-apps/swaylock-effects:=[fish-completion]
 	gui-apps/swaybg
+	app-shells/fish
+	app-shells/starship
+	app-shells/krabby-bin
+	media-fonts/nerd-fonts
+	sys-process/btop
+	sys-apps/qdirstat
+	sys-apps/gnome-disk-utility
+	media-sound/playerctl
+	media-sound/pavucontrol:=[X?]
+	sys-auth/polkit
+	gnome-extra/polkit-gnome
+	app-misc/fastfetch:=[wayland,X?]
+	net-wireless/blueman
+	app-misc/openrgb
 "
 # uses <linux/input-event-codes.h>
 DEPEND="
