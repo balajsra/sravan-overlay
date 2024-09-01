@@ -35,6 +35,7 @@ RDEPEND="
 	${COMMON_DEPEND}
 	X? (
 		x11-base/xwayland
+		x11-apps/xlsclients
 	)
 	gui-apps/kanshi
 	gui-apps/wdisplays
