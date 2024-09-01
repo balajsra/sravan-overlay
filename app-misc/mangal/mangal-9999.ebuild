@@ -19,11 +19,11 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
 
-IUSE="bash fish zsh"
+IUSE="bash-completion fish-completion zsh-completion"
 RDEPEND="
-	bash? ( app-shells/bash )
-	fish? ( app-shells/fish )
-	zsh? ( app-shells/zsh )
+	bash-completion? ( app-shells/bash )
+	fish-completion? ( app-shells/fish )
+	zsh-completion? ( app-shells/zsh )
 "
 
 src_unpack() {
@@ -36,18 +36,18 @@ src_compile() {
 }
 
 src_install() {
-	if use zsh; then
+	if use zsh-completion; then
 		insinto "/usr/share/zsh/vendor-completions"
 		cp completions/mangal.zsh completions/_mangal
 		doins completions/_mangal
 	fi
 
-	if use fish; then
+	if use fish-completion; then
 		insinto "/usr/share/fish/completions"
 		doins completions/mangal.fish
 	fi
 
-	if use bash; then
+	if use bash-completion; then
 		insinto "/usr/share/bash-completion/completions"
 		cp completions/mangal.bash completions/mangal
 		doins completions/mangal
