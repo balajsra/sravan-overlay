@@ -37,7 +37,7 @@ RDEPEND="
 		x11-base/xwayland
 		x11-apps/xlsclients
 	)
-	gui-apps/kanshi
+	gui-apps/shikane
 	gui-apps/wdisplays
 	gui-apps/wofi
 	gui-apps/wl-clipboard
