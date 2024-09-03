@@ -44,7 +44,6 @@ RDEPEND="
 	gui-apps/wl-clipboard
 	x11-misc/dunst:=[wayland]
 	gui-apps/foot
-	gui-apps/foot-terminfo
 	media-gfx/flameshot:=[wayland]
 	gui-apps/swayidle
 	gui-apps/swaylock-effects:=[fish-completion]
