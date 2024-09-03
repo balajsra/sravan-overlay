@@ -43,7 +43,8 @@ RDEPEND="
 	gui-apps/wofi
 	gui-apps/wl-clipboard
 	x11-misc/dunst:=[wayland]
-	gui-apps/foot
+	x11-terms/kitty:=[wayland,X?]
+	x11-terms/kitty-shell-integration
 	media-gfx/flameshot:=[wayland]
 	gui-apps/swayidle
 	gui-apps/swaylock-effects:=[fish-completion]
