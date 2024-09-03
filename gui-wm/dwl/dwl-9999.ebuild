@@ -37,16 +37,21 @@ RDEPEND="
 		x11-base/xwayland
 		x11-apps/xlsclients
 	)
-	gui-apps/shikane
+	gui-apps/wlr-randr
 	gui-apps/wdisplays
+	gui-apps/shikane
 	gui-apps/wofi
 	gui-apps/wl-clipboard
 	x11-misc/dunst:=[wayland]
 	gui-apps/foot
+	gui-apps/foot-terminfo
 	media-gfx/flameshot:=[wayland]
 	gui-apps/swayidle
 	gui-apps/swaylock-effects:=[fish-completion]
-	gui-apps/swaybg
+	gui-apps/grim:=[jpeg]
+	gui-apps/slurp
+	gui-apps/swaybg:=[gdk-pixbuf]
+	gui-apps/azote
 	app-shells/fish
 	app-shells/starship
 	app-shells/krabby-bin
