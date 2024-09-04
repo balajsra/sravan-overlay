@@ -41,7 +41,7 @@ RDEPEND="
 	gui-apps/wdisplays
 	gui-apps/shikane
 	gui-apps/rofi-wayland:=[drun,windowmode]
-	gui-apps/wl-clipboard
+	app-misc/cliphist
 	x11-misc/dunst:=[wayland]
 	x11-terms/kitty:=[wayland,X?]
 	x11-terms/kitty-shell-integration
