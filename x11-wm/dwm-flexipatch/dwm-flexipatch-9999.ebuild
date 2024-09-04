@@ -38,6 +38,7 @@ RDEPEND="
 	x11-apps/xinput
 	x11-misc/rofi
 	x11-misc/greenclip
+	x11-misc/nitrogen
 	x11-terms/kitty
 	x11-terms/kitty-shell-integration
 	app-shells/fish
