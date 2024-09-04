@@ -27,6 +27,8 @@ DEPEND="
 "
 RDEPEND="
 	${DEPEND}
+	x11-base/xorg-server
+	sys-apps/dbus
 	x11-misc/polybar-dwm-module
 	x11-misc/betterlockscreen
 	x11-misc/xss-lock

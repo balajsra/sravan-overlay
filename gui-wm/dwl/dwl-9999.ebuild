@@ -37,6 +37,7 @@ RDEPEND="
 		x11-base/xwayland
 		x11-apps/xlsclients
 	)
+	dev-qt/qtwayland
 	gui-apps/wlr-randr
 	gui-apps/wdisplays
 	gui-apps/shikane
