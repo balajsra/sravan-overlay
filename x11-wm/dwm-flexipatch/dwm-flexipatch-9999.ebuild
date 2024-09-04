@@ -31,6 +31,7 @@ RDEPEND="
 	x11-misc/betterlockscreen
 	x11-misc/xss-lock
 	x11-misc/dunst
+	x11-misc/xinit-xsession
 	x11-misc/xgetres
 	x11-misc/numlockx
 	x11-apps/xkill
