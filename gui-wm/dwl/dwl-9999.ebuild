@@ -40,7 +40,7 @@ RDEPEND="
 	gui-apps/wlr-randr
 	gui-apps/wdisplays
 	gui-apps/shikane
-	gui-apps/wofi
+	gui-apps/rofi-wayland:=[drun,windowmode]
 	gui-apps/wl-clipboard
 	x11-misc/dunst:=[wayland]
 	x11-terms/kitty:=[wayland,X?]
