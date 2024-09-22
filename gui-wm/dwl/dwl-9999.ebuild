@@ -37,18 +37,25 @@ RDEPEND="
 		x11-base/xwayland
 		x11-apps/xlsclients
 	)
+	gui-apps/waybar:=[network,tray]
+	app-misc/swhkd
+	app-misc/brightnessctl
 	dev-qt/qtwayland
 	gui-apps/wlr-randr
 	gui-apps/wdisplays
 	gui-apps/shikane
-	gui-apps/fuzzel:=[png,svg]
+	x11-misc/gammastep
+	gui-apps/wev
+	gui-apps/rofi-wayland:=[drun,windowmode]
 	app-misc/cliphist
 	x11-misc/dunst:=[wayland]
 	x11-terms/kitty:=[wayland,X?]
 	x11-terms/kitty-shell-integration
-	media-gfx/flameshot:=[wayland]
+	sys-apps/xdg-desktop-portal:=[geolocation]
+	gui-libs/xdg-desktop-portal-wlr
 	gui-apps/swayidle
 	gui-apps/swaylock-effects:=[fish-completion]
+	gui-apps/swappy
 	gui-apps/grim:=[jpeg]
 	gui-apps/slurp
 	gui-apps/swaybg:=[gdk-pixbuf]
