@@ -3,6 +3,8 @@
 
 EAPI=8
 
+inherit systemd
+
 DESCRIPTION="Simple clipboard manager to be integrated with rofi - Static binary available"
 HOMEPAGE="https://github.com/erebe/greenclip"
 
@@ -31,8 +33,8 @@ src_compile() {
 
 src_install() {
 	if use systemd ; then
-		insinto /usr/lib/systemd/user/
-		doins "${FILESDIR}"/greenclip.service
+		systemd_douserunit "${FILESDIR}"/greenclip.service
+
 		elog "Run \`systemctl --user enable --now greenclip.service\` to enable greenclip systemd user service."
 	fi
 
