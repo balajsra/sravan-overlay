@@ -37,6 +37,7 @@ RDEPEND="
 		x11-base/xwayland
 		x11-apps/xlsclients
 	)
+	app-misc/winit-wayland-session
 	gui-apps/waybar:=[network,tray]
 	app-misc/swhkd
 	app-misc/brightnessctl

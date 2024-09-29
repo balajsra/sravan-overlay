@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=winitrc
+Comment=Executes the .winitrc script in your home directory
+Exec=winitrcsession-helper
+TryExec=winitrcsession-helper
+Type=Application
