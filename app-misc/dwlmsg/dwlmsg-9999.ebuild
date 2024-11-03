@@ -32,4 +32,5 @@ src_compile() {
 
 src_install() {
 	dobin dwlmsg
+	doman ${FILESDIR}/dwlmsg.1
 }

@@ -1,0 +1,155 @@
+.TH DWLMSG 1 2024-11-03 GNU
+
+.SH NAME
+dwlmsg
+
+.SH SYNOPSIS
+.B dwlmsg
+[\fB\-OTLP\fR]
+.TP
+.B dwlmsg
+[\fB\-o \fIoutput\fR] \fB\-s\fR [\fB\-t \fItags\fR] [\fB\-l \fIlayout\fR] [\fB\-c\fR \fItags\fR]
+.TP
+.B dwlmsg
+[\fB\-o \fIoutput\fR] (\fB\-g\fR | \fB\-w\fR) [\fB\-Ootlcvmf\fR]
+
+.SH DESCRIPTION
+send ipc messages to dwl
+
+.SH OPTIONS
+.TP
+.BR \-g
+get
+.TP
+.BR \-s
+set
+.TP
+.BR \-w
+watch
+.TP
+.BR \-O
+get all outputs
+.TP
+.BR \-T
+get number of tags
+.TP
+.BR \-L
+get all available layouts
+.TP
+.BR \-P
+get compositor pid
+.TP
+.BR \-o
+select output
+.TP
+.BR \-t
+get/set selected tags (set with [+-^.], overwrite with ! prefix)
+.TP
+.BR \-l
+get/set current layout
+.TP
+.BR \-c
+get title and appid of focused client
+.TP
+.BR \-v
+get visibility of statusbar
+.TP
+.BR \-m
+get fullscreen status
+.TP
+.BR \-f
+get floating status
+
+.SH EXAMPLES
+act like dwl stdout
+.PP
+.nf
+.RS
+\fBdwlmsg\fR \-w
+.RE
+.fi
+.PP
+
+watch focused client appid and title
+.PP
+.nf
+.RS
+\fBdwlmsg\fR \-w \-c
+.RE
+.fi
+.PP
+
+get all available outputs
+.PP
+.nf
+.RS
+\fBdwlmsg\fR \-O
+.RE
+.fi
+.PP
+
+watch available outputs
+.PP
+.nf
+.RS
+\fBdwlmsg\fR \-w \-O
+.RE
+.fi
+.PP
+
+select tag 1, deselect tag 2, toggle tag 4 on output eDP-1
+.PP
+.nf
+.RS
+\fBdwlmsg\fR \-o eDP\-1 \-s \-t \+\-\.^
+.RE
+.fi
+.PP
+
+toggle tag 3, overwriting current tagset (yes, zero-indexed)
+.PP
+.nf
+.RS
+\fBdwlmsg\fR \-t !2^
+.RE
+.fi
+.PP
+
+select tag 8 on current output
+.PP
+.nf
+.RS
+\fBdwlmsg\fR \-s \-t 7
+.RE
+.fi
+.PP
+
+deselect tag 8 on current output
+.PP
+.nf
+.RS
+\fBdwlmsg\fR \-s \-t 7\-
+.RE
+.fi
+.PP
+
+switch to first layout (order given by dwlmsg -L)
+.PP
+.nf
+.RS
+\fBdwlmsg\fR \-l 0
+.RE
+.fi
+.PP
+
+switch to floating layout
+.PP
+.nf
+.RS
+\fBdwlmsg\fR \-l '><>'
+.RE
+.fi
+.PP
+
+.SH SEE ALSO
+\fBdwl\fR(1)
