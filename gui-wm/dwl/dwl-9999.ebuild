@@ -60,7 +60,7 @@ RDEPEND="
 	gui-apps/grim:=[jpeg]
 	gui-apps/slurp
 	gui-apps/swaybg:=[gdk-pixbuf]
-	gui-apps/azote
+	gui-apps/hyprwall-bin
 	app-shells/fish
 	app-shells/starship
 	app-shells/krabby-bin
