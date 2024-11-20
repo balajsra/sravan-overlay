@@ -27,8 +27,8 @@ src_install() {
 	cp chiaki-ng.AppImage chiaki-ng || die
 	dobin chiaki-ng
 
-	insinto /usr/share/icons/hicolor/512x512/apps
-	doins ${FILESDIR}/chiaking.png
+	insinto /usr/share/icons/hicolor/scalable/apps
+	doins ${FILESDIR}/chiaking.svg
 
 	insinto /usr/share/applications
 	doins ${FILESDIR}/chiaking.desktop
