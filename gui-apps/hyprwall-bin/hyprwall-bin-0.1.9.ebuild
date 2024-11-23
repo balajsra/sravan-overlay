@@ -21,6 +21,8 @@ RDEPEND="
 
 S="${WORKDIR}/hyprwall-${PV}"
 
+QA_PREBUILT="*"
+
 pkg_setup() {
 	cd ${WORKDIR}
 	wget -O hyprwall ${HOMEPAGE}/releases/download/v${PV}/hyprwall
