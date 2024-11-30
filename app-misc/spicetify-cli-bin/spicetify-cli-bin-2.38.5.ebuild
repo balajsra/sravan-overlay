@@ -35,10 +35,7 @@ RDEPEND="
 src_install() {
 	insinto "${INSTALLDIR}"
 	doins -r {css-map.json,CustomApps,Extensions,globals.d.ts,jsHelper,Themes,spicetify}
-	newbin - spicetify <<-EOF
-	#!/usr/bin/env sh
-	exec /opt/spicetify-cli/spicetify \$@
-	EOF
+	dobin ${FILESDIR}/spicetify
 	fperms +x "${INSTALLDIR}/spicetify"
 }
 
