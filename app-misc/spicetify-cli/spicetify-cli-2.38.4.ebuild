@@ -1,5 +1,6 @@
 # Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
+# Based on https://data.gpo.zugaina.org/src_prepare-overlay/app-misc/spicetify-cli
 
 EAPI=8
 
@@ -53,15 +54,18 @@ HOMEPAGE="https://spicetify.app/"
 SRC_URI="
 	https://github.com/spicetify/cli/archive/v${PV}.tar.gz -> ${P}.tar.gz
 	https://gitlab.com/api/v4/projects/37881342/packages/generic/${PN}/${PV}/${P}-deps.tar.xz
+	community-themes? ( https://github.com/spicetify/spicetify-themes/archive/refs/heads/master.zip -> spicetify-themes.zip )
 "
 S="${WORKDIR}/${MY_PN}-${PV}"
 
 LICENSE="Apache-2.0 BSD LGPL-2.1 MIT"
 SLOT="0"
 KEYWORDS="~amd64"
+IUSE="community-themes"
 
 # no tests
 RESTRICT="test"
+BDEPEND="community-themes? ( net-misc/wget )"
 
 INSTALLDIR="/opt/${PN}"
 
@@ -77,6 +81,12 @@ src_install() {
 	exec /opt/spicetify-cli/cli \$@
 	EOF
 	fperms +x "${INSTALLDIR}/cli"
+
+	if use community-themes; then
+		cd "${WORKDIR}/spicetify-themes-master"
+		insinto "${INSTALLDIR}/Themes"
+		doins -r Blossom BurntSienna Default Dreary Dribbblish Flow Matte Nightlight Onepunch SharkBlue Sleek StarryNight Turntable Ziro _Extra text manifest.json
+	fi
 }
 
 pkg_postinst() {
