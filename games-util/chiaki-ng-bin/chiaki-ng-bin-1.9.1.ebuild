@@ -4,8 +4,11 @@
 EAPI=8
 
 DESCRIPTION="Next-Generation of Chiaki (the open-source remote play client for PlayStation)"
-HOMEPAGE="https://github.com/streetpea/chiaki-ng"
-SRC_URI="${HOMEPAGE}/releases/download/v${PV}/chiaki-ng.AppImage.zip"
+HOMEPAGE="https://streetpea.github.io/chiaki-ng"
+SRC_URI="
+	https://github.com/streetpea/chiaki-ng/releases/download/v${PV}/chiaki-ng.AppImage.zip
+	https://github.com/streetpea/chiaki-ng/archive/refs/tags/v${PV}.tar.gz -> chiaki-ng.tar.gz
+"
 
 LICENSE="AGPL-3"
 SLOT="0"
@@ -19,17 +22,19 @@ RDEPEND="
 	dev-libs/hidapi
 "
 
-S=${WORKDIR}
+S="${WORKDIR}/chiaki-ng-${PV}"
 
 QA_PREBUILT="*"
 
 src_install() {
-	cp chiaki-ng.AppImage chiaki-ng || die
-	dobin chiaki-ng
+	cd ${WORKDIR}
+	cp chiaki-ng.AppImage chiaki || die
+	dobin chiaki
 
+	cd ${S}/gui
 	insinto /usr/share/icons/hicolor/scalable/apps
-	doins ${FILESDIR}/chiaking.svg
+	doins res/chiaking.svg
 
 	insinto /usr/share/applications
-	doins ${FILESDIR}/chiaking.desktop
+	doins chiaking.desktop
 }
