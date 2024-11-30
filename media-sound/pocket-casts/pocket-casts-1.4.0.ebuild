@@ -5,7 +5,10 @@ EAPI=8
 
 DESCRIPTION="Electron wrapper around the Pocket Casts web app with support for MPRIS (media controls)"
 HOMEPAGE="https://github.com/fuadsaud/pocket-casts-linux"
-SRC_URI="https://github.com/fuadsaud/pocket-casts-linux/releases/download/v${PV}/pocket-casts-linux-${PV}-x86_64.AppImage"
+SRC_URI="
+	${HOMEPAGE}/releases/download/v${PV}/pocket-casts-linux-${PV}-x86_64.AppImage -> pocket-casts.AppImage
+	${HOMEPAGE}/archive/refs/tags/v${PV}.tar.gz -> pocket-casts.tar.gz
+"
 
 LICENSE="MIT"
 SLOT="0"
@@ -16,14 +19,19 @@ RDEPEND="
 	sys-fs/fuse:0
 "
 
-S=${WORKDIR}
+S="${WORKDIR}/pocket-casts-linux-${PV}"
 
 QA_PREBUILT="*"
 
 src_install() {
-	cp "${DISTDIR}/pocket-casts-linux-${PV}-x86_64.AppImage" pocket-casts || die
+	cp "${DISTDIR}/pocket-casts.AppImage" pocket-casts || die
 	dobin pocket-casts
 
 	insinto /usr/share/applications
 	doins ${FILESDIR}/pocket-casts.desktop
+
+	cd ${S}/resources/icon
+	insinto /usr/share/icons/hicolor/scalable/apps
+	cp src.svg pocket-casts.svg || die
+	doins pocket-casts.svg
 }
