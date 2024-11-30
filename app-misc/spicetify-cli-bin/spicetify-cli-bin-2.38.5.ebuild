@@ -15,13 +15,17 @@ KEYWORDS="~amd64"
 
 S="${WORKDIR}"
 INSTALLDIR="/opt/spicetify-cli"
-IUSE="marketplace"
+IUSE="
+	marketplace
+	community-themes
+"
 
 DEPEND="
 	!app-misc/spicetify-cli
 "
 PDEPEND="
 	marketplace? ( app-misc/spicetify-marketplace-bin )
+	community-themes? ( app-misc/spicetify-community-themes )
 "
 RDEPEND="
 	>=media-sound/spotify-1.2.14
