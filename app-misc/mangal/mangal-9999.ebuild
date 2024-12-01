@@ -11,9 +11,10 @@ HOMEPAGE="https://github.com/metafates/mangal"
 
 EGIT_REPO_URI="${HOMEPAGE}.git"
 EGIT_BRANCH="main"
-EGIT_CHECKOUT_DIR="${WORKDIR}/${P}"
+EGIT_CHECKOUT_DIR="${WORKDIR}/${PN}"
+EGIT_SUBMODULES=( '*' )
 
-S="${WORKDIR}/${P}"
+S="${WORKDIR}/${PN}"
 
 LICENSE="MIT"
 SLOT="0"

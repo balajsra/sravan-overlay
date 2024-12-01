@@ -9,11 +9,16 @@ inherit git-r3 xdg
 DESCRIPTION="Breeze cursor theme with hacked style"
 HOMEPAGE="https://github.com/codejamninja/breeze-hacked-cursor-theme"
 EGIT_REPO_URI="${HOMEPAGE}.git"
+EGIT_BRANCH="main"
+EGIT_CHECKOUT_DIR="${WORKDIR}/${PN}"
+EGIT_SUBMODULES=( '*' )
 
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
 KEYWORDS="~amd64"
+
+S="${WORKDIR}/${PN}"
 
 DEPEND="media-gfx/inkscape
 	x11-apps/xcursorgen"

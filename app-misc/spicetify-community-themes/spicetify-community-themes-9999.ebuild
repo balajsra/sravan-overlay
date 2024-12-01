@@ -8,13 +8,16 @@ inherit git-r3
 DESCRIPTION="A community-driven collection of themes for customizing Spotify through Spicetify"
 HOMEPAGE="https://github.com/spicetify/spicetify-themes"
 EGIT_REPO_URI="${HOMEPAGE}.git"
+EGIT_BRANCH="master"
+EGIT_CHECKOUT_DIR="${WORKDIR}/${PN}"
+EGIT_SUBMODULES=( '*' )
 
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE="man"
 
-S="${WORKDIR}/${P}"
+S="${WORKDIR}/${PN}"
 INSTALLDIR="/opt/spicetify-cli"
 
 DEPEND="

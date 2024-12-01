@@ -8,13 +8,16 @@ inherit linux-info cargo git-r3 systemd
 DESCRIPTION="Simple Wayland HotKey Daemon"
 HOMEPAGE="https://github.com/waycrate/swhkd"
 EGIT_REPO_URI="${HOMEPAGE}.git"
+EGIT_BRANCH="main"
+EGIT_CHECKOUT_DIR="${WORKDIR}/${PN}"
+EGIT_SUBMODULES=( '*' )
 
 LICENSE="BSD-2"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE="man systemd openrc"
 
-S="${WORKDIR}/${P}"
+S="${WORKDIR}/${PN}"
 
 CONFIG_CHECK="
 	INPUT_EVDEV

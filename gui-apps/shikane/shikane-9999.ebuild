@@ -8,13 +8,16 @@ inherit cargo git-r3
 DESCRIPTION="A deterministic dynamic output configuration tool that automatically detects and configures connected outputs based on a set of profiles"
 HOMEPAGE="https://gitlab.com/w0lff/shikane"
 EGIT_REPO_URI="${HOMEPAGE}.git"
+EGIT_BRANCH="master"
+EGIT_CHECKOUT_DIR="${WORKDIR}/${PN}"
+EGIT_SUBMODULES=( '*' )
 
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE="man"
 
-S="${WORKDIR}/${P}"
+S="${WORKDIR}/${PN}"
 
 BDEPEND="
 	man? (
