@@ -6,8 +6,8 @@ EAPI=8
 DESCRIPTION="The future of modding with Nexus Mods"
 HOMEPAGE="https://nexus-mods.github.io/NexusMods.App"
 SRC_URI="
-	https://github.com/Nexus-Mods/NexusMods.App/releases/download/v${PV}/NexusMods.App.x86_64.AppImage -> NexusMods.App
-	https://github.com/Nexus-Mods/NexusMods.App/archive/refs/tags/v${PV}.tar.gz -> NexusMods.App.tar.gz
+	https://github.com/Nexus-Mods/NexusMods.App/releases/download/v${PV}/NexusMods.App.x86_64.AppImage -> ${P}.AppImage
+	https://github.com/Nexus-Mods/NexusMods.App/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
 "
 
 LICENSE="GPL-3"
@@ -35,7 +35,7 @@ QA_PREBUILT="*"
 
 src_install() {
 	cd ${WORKDIR}
-	cp "${DISTDIR}/NexusMods.App" NexusMods.App || die
+	cp "${DISTDIR}/${P}.AppImage" NexusMods.App || die
 	dobin NexusMods.App
 
 	cd ${S}/src/NexusMods.App
