@@ -7,7 +7,7 @@ DESCRIPTION="Next-Generation of Chiaki (the open-source remote play client for P
 HOMEPAGE="https://streetpea.github.io/chiaki-ng"
 SRC_URI="
 	https://github.com/streetpea/chiaki-ng/releases/download/v${PV}/chiaki-ng.AppImage.zip
-	https://github.com/streetpea/chiaki-ng/archive/refs/tags/v${PV}.tar.gz -> chiaki-ng.tar.gz
+	https://github.com/streetpea/chiaki-ng/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
 "
 
 LICENSE="AGPL-3"
@@ -20,6 +20,7 @@ RDEPEND="
 	media-libs/libva
 	dev-util/vulkan-headers
 	dev-libs/hidapi
+	media-video/pipewire
 "
 
 S="${WORKDIR}/chiaki-ng-${PV}"
