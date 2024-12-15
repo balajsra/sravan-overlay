@@ -3,15 +3,20 @@
 
 EAPI=8
 
-inherit linux-mod-r1
+inherit linux-mod-r1 git-r3
 
 DESCRIPTION="Experimental Logitech force feedback module"
 HOMEPAGE="https://github.com/berarma/new-lg4ff"
-SRC_URI="https://github.com/berarma/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
-LICENSE="GPL-2"
+EGIT_REPO_URI="${HOMEPAGE}.git"
+EGIT_BRANCH="master"
+EGIT_CHECKOUT_DIR="${WORKDIR}/${PN}"
+EGIT_SUBMODULES=( '*' )
 
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64"
+
+S="${WORKDIR}/${PN}"
 
 # https://github.com/berarma/new-lg4ff/issues/57#issuecomment-1019325204
 CONFIG_CHECK="LOGIWHEELS_FF"
