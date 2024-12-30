@@ -50,8 +50,7 @@ RDEPEND="
 	gui-apps/rofi-wayland:=[drun,windowmode]
 	app-misc/cliphist
 	x11-misc/dunst:=[wayland]
-	x11-terms/kitty:=[wayland,X?]
-	x11-terms/kitty-shell-integration
+	x11-terms/ghostty
 	sys-apps/xdg-desktop-portal:=[geolocation]
 	gui-libs/xdg-desktop-portal-wlr
 	gui-apps/swayidle
