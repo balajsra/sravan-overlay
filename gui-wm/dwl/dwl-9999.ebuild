@@ -1,4 +1,4 @@
-# Copyright 2022-2024 Gentoo Authors
+# Copyright 2022-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 # Based on https://data.gpo.zugaina.org/gentoo/gui-wm/dwl/dwl-9999.ebuild
 
@@ -50,7 +50,7 @@ RDEPEND="
 	gui-apps/rofi-wayland:=[drun,windowmode]
 	app-misc/cliphist
 	x11-misc/dunst:=[wayland]
-	x11-terms/ghostty
+	gui-apps/foot
 	sys-apps/xdg-desktop-portal:=[geolocation]
 	gui-libs/xdg-desktop-portal-wlr
 	gui-apps/swayidle
