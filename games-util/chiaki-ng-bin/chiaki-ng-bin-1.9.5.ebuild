@@ -1,4 +1,4 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -6,7 +6,7 @@ EAPI=8
 DESCRIPTION="Next-Generation of Chiaki (the open-source remote play client for PlayStation)"
 HOMEPAGE="https://streetpea.github.io/chiaki-ng"
 SRC_URI="
-	https://github.com/streetpea/chiaki-ng/releases/download/v${PV}/chiaki-ng.AppImage_x86_64
+	https://github.com/streetpea/chiaki-ng/releases/download/v${PV}/chiaki-ng.AppImage_x86_64 -> ${P}.AppImage
 	https://github.com/streetpea/chiaki-ng/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
 "
 
@@ -29,7 +29,7 @@ QA_PREBUILT="*"
 
 src_install() {
 	cd ${WORKDIR}
-	cp ${DISTDIR}/chiaki-ng.AppImage_x86_64 chiaki || die
+	cp ${DISTDIR}/${P}.AppImage chiaki || die
 	dobin chiaki
 
 	cd ${S}/gui
