@@ -6,7 +6,7 @@ EAPI=8
 DESCRIPTION="isd (interactive systemd) - a better way to work with systemd units"
 HOMEPAGE="https://isd-project.github.io/isd"
 SRC_URI="
-	https://github.com/isd-project/isd/releases/download/v${PV}/isd.AppImage -> ${P}.AppImage
+	https://github.com/isd-project/isd/releases/download/v${PV}/isd.x86_64-linux.AppImage -> ${P}.AppImage
 	https://github.com/isd-project/isd/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
 "
 
@@ -28,11 +28,11 @@ src_install() {
 	cp ${DISTDIR}/${P}.AppImage isd || die
 	dobin isd
 
-	cd ${S}/assets
-	insinto /usr/share/icons/hicolor/1024x1024/apps
+	cd ${S}/share/icons/hicolor/512x512/apps
+	insinto /usr/share/icons/hicolor/512x512/apps
 	doins isd.png
 
-	# Add version to desktop file
+	cd ${S}/share/applications
 	insinto /usr/share/applications
-	doins ${FILESDIR}/isd.desktop
+	doins isd.desktop
 }
