@@ -42,6 +42,8 @@ RDEPEND="
 	app-misc/swhkd
 	app-misc/brightnessctl
 	dev-qt/qtwayland
+	gui-apps/qt6ct
+	app-misc/nwg-look
 	gui-apps/wlr-randr
 	gui-apps/wdisplays
 	gui-apps/shikane
@@ -59,7 +61,7 @@ RDEPEND="
 	gui-apps/grim:=[jpeg]
 	gui-apps/slurp
 	gui-apps/swaybg:=[gdk-pixbuf]
-	gui-apps/hyprwall-bin
+	gui-apps/azote
 	app-shells/fish
 	app-shells/starship
 	app-shells/krabby-bin
