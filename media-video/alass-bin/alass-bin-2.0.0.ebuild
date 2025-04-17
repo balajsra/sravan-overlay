@@ -3,18 +3,24 @@
 
 EAPI=8
 
-inherit cargo
-
 DESCRIPTION="Automatic Language-Agnostic Subtitle Synchronization"
 HOMEPAGE="https://github.com/kaegi/alass"
-SRC_URI="${HOMEPAGE}/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="${HOMEPAGE}/releases/download/v${PV}/alass-linux64 -> ${P}"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 
-S="${WORKDIR}/${P}"
+S="${WORKDIR}"
 
 RDEPEND="
 	media-video/ffmpeg
 "
+
+QA_PREBUILT="*"
+
+src_install() {
+	cd ${WORKDIR}
+	cp ${DISTDIR}/${P} alass || die
+	dobin alass
+}
