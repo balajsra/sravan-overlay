@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{11..14} )
+PYTHON_COMPAT=( python3_{11..13} )
 
 DESCRIPTION="Graphical application to configure Logitech Wheels"
 HOMEPAGE="https://github.com/berarma/oversteer"
