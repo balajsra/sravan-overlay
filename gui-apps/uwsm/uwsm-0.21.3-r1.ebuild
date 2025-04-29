@@ -22,18 +22,17 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
-MESON_ARGS=(
+MESONARGS=(
 	-Duuctl=enabled
 	-Dfumon=enabled
 	-Duwsm-app=enabled
 	-Ddocdir=/usr/share/doc/${PF}
 )
 
+src_configure() {
+	meson_src_configure ${MESONARGS[@]}
+}
+
 src_install() {
 	meson_src_install
-
-	# Rename folder documentation
-	dodir "/usr/share/doc/${PF}"
-	mv "${D}/usr/share/doc/uwsm"/* "${D}/usr/share/doc/${PF}/" || die "Failed to repair documentation, move files."
-	rmdir "${D}/usr/share/doc/uwsm" || die "Failed to repair documentation, delete old folder."
 }
