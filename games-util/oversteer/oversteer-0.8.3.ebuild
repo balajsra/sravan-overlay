@@ -15,17 +15,18 @@ KEYWORDS="~amd64"
 
 BDEPEND="dev-build/meson"
 
-RDEPEND="dev-python/pygobject
-		 dev-python/pyudev
-		 dev-python/evdev
-		 dev-python/pyxdg
-		 dev-python/scipy
-		 dev-python/pycairo
-		 dev-python/matplotlib
-		 sys-devel/gettext
-		 dev-libs/appstream-glib
-		 dev-util/desktop-file-utils
-		 x11-libs/gtk+
+RDEPEND="
+	dev-python/pygobject
+	dev-python/pyudev
+	dev-python/evdev
+	dev-python/pyxdg
+	dev-python/scipy
+	dev-python/pycairo
+	dev-python/matplotlib
+	sys-devel/gettext
+	dev-libs/appstream-glib
+	dev-util/desktop-file-utils
+	x11-libs/gtk+
 "
 
 src_prepare() {
