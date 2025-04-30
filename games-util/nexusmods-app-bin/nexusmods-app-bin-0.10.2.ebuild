@@ -1,7 +1,9 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2025 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
+
+inherit desktop
 
 DESCRIPTION="The future of modding with Nexus Mods"
 HOMEPAGE="https://nexus-mods.github.io/NexusMods.App"
@@ -10,14 +12,12 @@ SRC_URI="
 	https://github.com/Nexus-Mods/NexusMods.App/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
 "
 
+S="${WORKDIR}/NexusMods.App-${PV}"
+
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 RESTRICT="strip"
-
-DEPEND="
-	!games-util/nexusmodsapp
-"
 
 BDEPEND="
 	sys-apps/sed
@@ -29,19 +29,16 @@ RDEPEND="
 	dev-util/desktop-file-utils
 "
 
-S="${WORKDIR}/NexusMods.App-${PV}"
-
 QA_PREBUILT="*"
 
 src_install() {
-	cd ${WORKDIR}
+	cd "${WORKDIR}"
 	cp "${DISTDIR}/${P}.AppImage" NexusMods.App || die
 	dobin NexusMods.App
 
-	cd ${S}/src/NexusMods.App
-	insinto /usr/share/applications
+	cd "${S}/src/NexusMods.App"
 	sed -i -e 's/${INSTALL_EXEC}/\/usr\/bin\/NexusMods.App/' com.nexusmods.app.desktop
-	doins com.nexusmods.app.desktop
+	domenu com.nexusmods.app.desktop
 
 	insinto /usr/share/metainfo
 	doins com.nexusmods.app.metainfo.xml
