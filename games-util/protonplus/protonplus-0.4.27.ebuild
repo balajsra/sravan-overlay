@@ -45,4 +45,8 @@ src_compile() {
 src_install() {
 	cd "${S}/${BUILD_DIR}"
 	ninja install
+
+	cd "${D}"
+	shopt -s globstar
+	rm **/*.cache **/*.compiled
 }
