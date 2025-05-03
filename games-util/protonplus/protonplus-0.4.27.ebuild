@@ -23,6 +23,7 @@ BDEPEND="
 	>=gui-libs/gtk-4
 	>=gui-libs/libadwaita-1.5
 	dev-libs/json-glib
+	dev-libs/glib
 	net-libs/libsoup
 	app-arch/libarchive
 	dev-util/desktop-file-utils
@@ -49,4 +50,14 @@ src_install() {
 	cd "${D}"
 	shopt -s globstar
 	rm **/*.cache **/*.compiled
+}
+
+pkg_postinst() {
+	elog "Recompiling glib schemas after package install"
+	glib-compile-schemas /usr/share/glib-2.0/schemas/
+}
+
+pkg_postrm() {
+	elog "Recompiling glib schemas after package removal"
+	glib-compile-schemas /usr/share/glib-2.0/schemas/
 }
