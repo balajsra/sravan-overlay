@@ -8,12 +8,11 @@ inherit meson
 
 DESCRIPTION="Universal Wayland Session Manager"
 HOMEPAGE="https://github.com/Vladimir-csp/uwsm"
-SRC_URI="${HOMEPAGE}/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/Vladimir-csp/uwsm/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE=""
 
 DEPEND="
 	dev-build/meson
