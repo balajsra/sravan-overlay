@@ -9,11 +9,12 @@ SRC_URI="
 	https://github.com/spicetify/cli/releases/download/v${PV}/spicetify-${PV}-linux-amd64.tar.gz -> ${P}.tar.gz
 "
 
+S="${WORKDIR}"
+
 LICENSE="Apache-2.0 BSD LGPL-2.1 MIT"
 SLOT="0"
 KEYWORDS="~amd64"
 
-S="${WORKDIR}"
 INSTALLDIR="/opt/spicetify-cli"
 IUSE="
 	marketplace
@@ -21,7 +22,7 @@ IUSE="
 "
 
 DEPEND="
-	!app-misc/spicetify-cli
+	!!app-misc/spicetify-cli
 "
 PDEPEND="
 	marketplace? ( app-misc/spicetify-marketplace-bin )
@@ -35,7 +36,7 @@ RDEPEND="
 src_install() {
 	insinto "${INSTALLDIR}"
 	doins -r {css-map.json,CustomApps,Extensions,globals.d.ts,jsHelper,Themes,spicetify}
-	dobin ${FILESDIR}/spicetify
+	dobin "${FILESDIR}/spicetify"
 	fperms +x "${INSTALLDIR}/spicetify"
 }
 
