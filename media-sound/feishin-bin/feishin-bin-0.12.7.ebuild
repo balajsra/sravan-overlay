@@ -21,6 +21,7 @@ RESTRICT="strip"
 
 RDEPEND="
 	sys-fs/fuse:0
+	media-video/mpv
 "
 
 QA_PREBUILT="*"
