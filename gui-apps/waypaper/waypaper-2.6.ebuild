@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{11..14} )
+PYTHON_COMPAT=( python3_{11..13} )
 DISTUTILS_SINGLE_IMPL=1
 DISTUTILS_USE_PEP517=setuptools
 inherit distutils-r1
@@ -24,11 +24,18 @@ BDEPEND="
 
 # [wallutils](https://github.com/xyproto/wallutils) is another option,
 # but no ebuild exists yet
-RDEPEND="|| (
-	gui-apps/swww
-	gui-apps/swaybg
-	media-gfx/feh
-	gui-apps/hyprpaper
-	gui-apps/mpvpaper
-)
+RDEPEND="
+	|| (
+	   gui-apps/swww
+	   gui-apps/swaybg
+	   media-gfx/feh
+	   gui-apps/hyprpaper
+	   gui-apps/mpvpaper
+	)
+	dev-python/pygobject
+	dev-python/platformdirs
+	dev-python/pillow
+	dev-python/imageio
+	dev-python/imageio-ffmpeg
+	dev-python/screeninfo
 "
