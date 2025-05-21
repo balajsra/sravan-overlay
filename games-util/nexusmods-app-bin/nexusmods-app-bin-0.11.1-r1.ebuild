@@ -32,18 +32,19 @@ RDEPEND="
 QA_PREBUILT="*"
 
 src_install() {
+	# Binary
 	cd "${WORKDIR}"
-	cp "${DISTDIR}/${P}.AppImage" NexusMods.App || die
-	dobin NexusMods.App
+	newbin "${DISTDIR}/${P}.AppImage" NexusMods.App
 
+	# Desktop Entry
 	cd "${S}/src/NexusMods.App"
 	sed -i -e 's/${INSTALL_EXEC}/\/usr\/bin\/NexusMods.App/' com.nexusmods.app.desktop
 	domenu com.nexusmods.app.desktop
 
+	# Metainfo
 	insinto /usr/share/metainfo
 	doins com.nexusmods.app.metainfo.xml
 
-	insinto /usr/share/icons/hicolor/scalable/apps
-	cp icon.svg com.nexusmods.app.svg || die
-	doins com.nexusmods.app.svg
+	# Icon
+	newicon --size scalable icon.svg com.nexusmods.app.svg
 }
