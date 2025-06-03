@@ -29,8 +29,7 @@ QA_PREBUILT="*"
 src_install() {
 	# Binary
 	cd "${WORKDIR}"
-	cp "${DISTDIR}/${P}.AppImage" feishin || die
-	dobin feishin
+	newbin "${DISTDIR}/${P}.AppImage" feishin
 
 	# Icon
 	cd "${S}/assets/icons"
