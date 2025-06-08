@@ -7,11 +7,18 @@ inherit vala
 
 DESCRIPTION="A modern compatibility tools manager for Linux"
 HOMEPAGE="https://github.com/Vysp3r/protonplus"
-SRC_URI="
-	https://github.com/Vysp3r/ProtonPlus/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
-"
 
-S="${WORKDIR}/ProtonPlus-${PV}"
+if [[ ${PV} == 0.5.0.1 ]]; then
+	SRC_URI="
+		https://github.com/Vysp3r/ProtonPlus/archive/refs/tags/v0.5.0-1.tar.gz -> ${P}.tar.gz
+	"
+	S="${WORKDIR}/ProtonPlus-0.5.0-1"
+else
+	SRC_URI="
+		https://github.com/Vysp3r/ProtonPlus/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
+	"
+	S="${WORKDIR}/ProtonPlus-${PV}"
+fi
 
 LICENSE="GPL-3"
 SLOT="0"
