@@ -8,11 +8,13 @@ inherit vala
 DESCRIPTION="A modern compatibility tools manager for Linux"
 HOMEPAGE="https://github.com/Vysp3r/protonplus"
 
-if [[ ${PV} == 0.5.0.1 ]]; then
+# Convert W.X.Y.Z to W.X.Y-Z in SRC_URI
+if [[ ${PV} =~ ^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+	MODIFIED_PACKAGE_VERSION=${PV%.*}-${PV##*.}
 	SRC_URI="
-		https://github.com/Vysp3r/ProtonPlus/archive/refs/tags/v0.5.0-1.tar.gz -> ${P}.tar.gz
+		https://github.com/Vysp3r/ProtonPlus/archive/refs/tags/v${MODIFIED_PACKAGE_VERSION}.tar.gz -> ${P}.tar.gz
 	"
-	S="${WORKDIR}/ProtonPlus-0.5.0-1"
+	S="${WORKDIR}/ProtonPlus-${MODIFIED_PACKAGE_VERSION}"
 else
 	SRC_URI="
 		https://github.com/Vysp3r/ProtonPlus/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
