@@ -6,18 +6,23 @@ EAPI=8
 DESCRIPTION="Download extensions and themes directly from Spicetify"
 HOMEPAGE="https://github.com/spicetify/marketplace"
 SRC_URI="
-	${HOMEPAGE}/releases/download/v${PV}/marketplace.zip -> ${P}.zip
+	https://github.com/spicetify/marketplace/releases/download/v${PV}/marketplace.zip -> ${P}.zip
 "
+
+S="${WORKDIR}"
 
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
 
-S="${WORKDIR}"
 INSTALLDIR="/opt/spicetify-cli"
 
+BDEPEND="
+	app-arch/unzip
+"
+
 DEPEND="
-	|| ( app-misc/spicetify-cli app-misc/spicetify-cli-bin )
+	app-misc/spicetify-cli-bin
 "
 
 src_install() {
