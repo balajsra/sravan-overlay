@@ -8,7 +8,7 @@ inherit desktop
 DESCRIPTION="A modern self-hosted music player"
 HOMEPAGE="https://github.com/jeffvli/feishin"
 SRC_URI="
-	https://github.com/jeffvli/feishin/releases/download/v${PV}/Feishin-${PV}-linux-x86_64.AppImage -> ${P}.AppImage
+	https://github.com/jeffvli/feishin/releases/download/v${PV}/Feishin-linux-x86_64.AppImage -> ${P}.AppImage
 	https://github.com/jeffvli/feishin/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
 "
 
