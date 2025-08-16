@@ -30,7 +30,7 @@ PDEPEND="
 "
 RDEPEND="
 	>=media-sound/spotify-1.2.14
-	<=media-sound/spotify-1.2.63
+	<=media-sound/spotify-1.2.63-r0
 "
 
 src_install() {
