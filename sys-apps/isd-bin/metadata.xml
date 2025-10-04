@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM 'https://www.gentoo.org/dtd/metadata.dtd'>
+<pkgmetadata>
+	<maintainer type="person">
+		<email>sr98vn@gmail.com</email>
+		<name>Sravan Balaji</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="github">kainctl/isd</remote-id>
+	</upstream>
+</pkgmetadata>
