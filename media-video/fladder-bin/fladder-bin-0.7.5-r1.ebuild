@@ -21,6 +21,7 @@ RESTRICT="strip"
 
 RDEPEND="
 	sys-fs/fuse:0
+	media-video/mpv[libmpv]
 "
 
 QA_PREBUILT="*"
