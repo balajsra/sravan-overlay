@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=MangoWC (uwsm-managed)
+Comment=A simple Wayland compositor
+Exec=uwsm start -- mango.desktop
+TryExec=uwsm
+DesktopNames=MangoWC
+Type=Application

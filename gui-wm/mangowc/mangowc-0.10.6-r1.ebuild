@@ -72,6 +72,9 @@ src_compile() {
 
 src_install() {
 	meson_src_install
+
+	insinto /usr/share/wayland-sessions
+	doins "${FILESDIR}/mango-uwsm.desktop"
 }
 
 pkg_postinst() {
