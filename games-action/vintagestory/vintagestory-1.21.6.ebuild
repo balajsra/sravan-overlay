@@ -1,9 +1,9 @@
-# Copyright 2024-2025 Gentoo Authors
+# Copyright 2024-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 # Based on https://data.gpo.zugaina.org/gentoo-zh/games-action/vintagestory/
 
 EAPI=8
-DOTNET_PKG_COMPAT=7.0
+DOTNET_PKG_COMPAT=8.0
 inherit desktop dotnet-pkg-base xdg
 
 DESCRIPTION="Uncompromising wilderness survival sandbox game (requires paid account)"
