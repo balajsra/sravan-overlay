@@ -4,5 +4,4 @@ Name=Mango (UWSM)
 Comment=mango WM managed by UWSM
 Exec=uwsm start mango.desktop
 Icon=mango
-DesktopNames=mango;wlroots
 Type=Application
