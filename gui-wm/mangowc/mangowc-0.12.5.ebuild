@@ -17,6 +17,8 @@ fi
 DESCRIPTION="wayland compositor based on wlroots and scenefx (dwm but wayland)"
 HOMEPAGE="https://github.com/DreamMaoMao/mangowc"
 
+S="${WORKDIR}/mango-${PV}"
+
 LICENSE="CC0-1.0 GPL-3+ MIT"
 SLOT="0"
 KEYWORDS="~amd64"
