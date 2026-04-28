@@ -59,7 +59,7 @@ src_compile() {
 }
 
 src_install() {
-	newicon assets/gameicon.xpm Vintagestory.xpm
+	newicon assets/gameicon.png Vintagestory.png
 	domenu "${FILESDIR}/Vintagestory.desktop"
 	domenu "${FILESDIR}/Vintagestory_url_connect.desktop"
 	domenu "${FILESDIR}/Vintagestory_url_mod.desktop"
