@@ -1,4 +1,4 @@
-# Copyright 2022-2025 Gentoo Authors
+# Copyright 2022-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 # Based on ebuild from https://data.gpo.zugaina.org/guru/gui-wm/mangowc/ by Saveliy Boyarchuk
 
@@ -59,6 +59,7 @@ BDEPEND="
 	>=dev-util/wayland-scanner-1.23
 	>=dev-build/meson-0.60.0
 	virtual/pkgconfig
+	dev-libs/cJSON
 "
 
 src_configure() {
